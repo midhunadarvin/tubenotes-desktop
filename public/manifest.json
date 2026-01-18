@@ -1,0 +1,29 @@
+{
+  "name": "TubeNotes",
+  "short_name": "TubeNotes",
+  "description": "Visual Video Knowledge Base - YouTube video note-taking application",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#ff3366",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["productivity", "education", "utilities"],
+  "lang": "tr-TR",
+  "dir": "ltr",
+  "scope": "/",
+  "prefer_related_applications": false
+}
