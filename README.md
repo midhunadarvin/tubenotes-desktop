@@ -232,7 +232,7 @@ TubeNotes is a modern knowledge management system for YouTube videos. Organize y
 - Windows 10+ (64-bit)
 - macOS 10.13+
 - Linux: Ubuntu 18.04+, Fedora 32+, Debian 10+
-- RAM: 4GB (recommended 8GB)
+- RAM: -
 - Disk: 500MB free space
 
 **Development**
