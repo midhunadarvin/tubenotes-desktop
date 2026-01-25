@@ -26,7 +26,6 @@ TubeNotes, YouTube videolarınız için modern bir görsel bilgi yönetim sistem
 
 **🎨 Canvas Mode (Yeni!)**
 - React Flow tabanlı sonsuz canvas
-- Sürükle-bırak ile şekil ekleme (dikdörtgen, daire, elips)
 - Metin kutuları ile hızlı not alma
 - CodeMirror ile markdown editör node'ları
 - Manuel kaydetme (Ctrl+S) - veri güvenliği
@@ -87,7 +86,7 @@ TubeNotes, YouTube videolarınız için modern bir görsel bilgi yönetim sistem
 - Windows 10+ (64-bit)
 - macOS 10.13+
 - Linux: Ubuntu 18.04+, Fedora 32+, Debian 10+
-- RAM: 4GB önerilir
+- RAM: -
 - Disk: 500MB boş alan
 
 **Geliştirme**
@@ -124,7 +123,6 @@ npm run build-linux
 1. "+ New Canvas" ile yeni canvas oluşturun
 2. Canvas Mode'a geçin
 3. Araçları kullanın:
-   - **Drag Tool**: Şekil sürükle-bırak (dikdörtgen, daire, elips)
    - **Text Tool**: Hızlı metin kutusu ekle
    - **Markdown**: CodeMirror markdown editörü ekle
 4. **Ctrl+S** ile manuel kaydetme yapın
@@ -202,7 +200,6 @@ TubeNotes is a modern visual knowledge management system for YouTube videos. Tak
 
 **🎨 Canvas Mode (New!)**
 - React Flow based infinite canvas
-- Drag-and-drop shape creation (rectangle, circle, ellipse)
 - Text boxes for quick notes
 - CodeMirror markdown editor nodes
 - Manual save (Ctrl+S) - data safety
@@ -263,7 +260,7 @@ TubeNotes is a modern visual knowledge management system for YouTube videos. Tak
 - Windows 10+ (64-bit)
 - macOS 10.13+
 - Linux: Ubuntu 18.04+, Fedora 32+, Debian 10+
-- RAM: 4GB recommended
+- RAM: -
 - Disk: 500MB free space
 
 **Development**
@@ -300,7 +297,6 @@ npm run build-linux
 1. Create new canvas with "+ New Canvas"
 2. Switch to Canvas Mode
 3. Use tools:
-   - **Drag Tool**: Drag-and-drop shapes (rectangle, circle, ellipse)
    - **Text Tool**: Add quick text boxes
    - **Markdown**: Add CodeMirror markdown editor
 4. **Ctrl+S** for manual save
