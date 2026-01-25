@@ -87,7 +87,7 @@ TubeNotes, YouTube videolarınız için modern bir görsel bilgi yönetim sistem
 - Windows 10+ (64-bit)
 - macOS 10.13+
 - Linux: Ubuntu 18.04+, Fedora 32+, Debian 10+
-- RAM: -
+- RAM: 4GB önerilir
 - Disk: 500MB boş alan
 
 **Geliştirme**
@@ -105,9 +105,6 @@ cd tubenotes
 # Bağımlılıkları yükleyin
 npm install
 
-# Web için geliştirme sunucusu
-npm run dev
-
 # Masaüstü için geliştirme
 npm run electron-dev
 
@@ -121,7 +118,9 @@ npm run build-mac
 npm run build-linux
 ```
 
-TaCanvas Modu**
+### Kullanım
+
+**Canvas Modu**
 1. "+ New Canvas" ile yeni canvas oluşturun
 2. Canvas Mode'a geçin
 3. Araçları kullanın:
@@ -144,10 +143,6 @@ TaCanvas Modu**
 1. Kenar çubuğunda "+ Add Folder" tıklayın
 2. Klasör adı girin, Enter basın
 3. Canvas veya notları klasörlere taşıyın
-**Not Alma**
-1. Video kartına tıklayın
-2. Editör araç çubuğunu kullanın
-3. Notlar otomatik kaydedilir
 
 **Durum Yönetimi**
 - Video kartının üzerine gelin
@@ -162,7 +157,17 @@ TaCanvas Modu**
 
 **Tema Özelleştirme**
 
-`apindows: `%APPDATA%/tubenotes/tubenotes.db` (SQLite)
+`app/globals.css` dosyasını düzenleyin:
+
+```css
+:root[data-theme="dark"] {
+  --color-bg: #0a0a0a;
+  --color-primary: #ff0000;
+}
+```
+
+**Veri Konumu**
+- Windows: `%APPDATA%/tubenotes/tubenotes.db` (SQLite)
 - macOS: `~/Library/Application Support/tubenotes/tubenotes.db`
 - Linux: `~/.config/tubenotes/tubenotes.db`
 
@@ -170,16 +175,6 @@ TaCanvas Modu**
 - SQLite veritabanı kullanır (better-sqlite3)
 - Canvas verileri JSON string olarak saklanır
 - Video notları ve klasörler ilişkisel tablolarda tutulur
-  --color-bg: #0a0a0a;
-  --color-primary: #ff0000;
-}
-```
-
-**Veri Konumu**
-- Web: Browser localStorage
-- Windows: `%APPDATA%/TubeNotes/data`
-- macOS: `~/Library/Application Support/TubeNotes/data`
-- Linux: `~/.config/TubeNotes/data`
 
 ### Katkıda Bulunma
 
@@ -187,7 +182,21 @@ TaCanvas Modu**
 2. Feature branch oluşturun (`git checkout -b feature/yeni-ozellik`)
 3. Commit yapın (`git commit -m 'Yeni özellik'`)
 4. Push edin (`git push origin feature/yeni-ozellik`)
-5. Pull Request açınvisual knowledge management system for YouTube videos. Take video notes, visualize your ideas on infinite canvas, draw shapes, and add markdown notes. Available as desktop application (Windows, macOS, Linux).
+5. Pull Request açın
+
+### Lisans
+
+MIT Lisansı - [LICENSE](LICENSE) dosyasına bakın.
+
+---
+
+<a id="english"></a>
+
+## English
+
+### Overview
+
+TubeNotes is a modern visual knowledge management system for YouTube videos. Take video notes, visualize your ideas on infinite canvas, draw shapes, and add markdown notes. Available as desktop application (Windows, macOS, Linux).
 
 ### Key Features
 
@@ -229,17 +238,14 @@ TaCanvas Modu**
 - Local storage (no cloud dependency)
 - Privacy-focused
 - Secure canvas data storage
-**Theme Support**
-- Dark Theme: Black background, red accents
-- Navy Theme: Navy background, orange accents
-- Light Theme: Cream background, burgundy accents
 
-**Search & Filtering**
-- Real-time search across titles, channels, and note content
-- Status filtering (Unwatched, Watching, Watched)
-- Folder-based filtering
+### Technologies
 
-**Database | SQLite (better-sqlite3 12.6.2) |
+| Category | Technology |
+|----------|------------|
+| Framework | Next.js 16.1.3 (App Router, Turbopack) |
+| Desktop | Electron 40.0.0 + electron-builder |
+| Database | SQLite (better-sqlite3 12.6.2) |
 | ORM | Prisma 7.3.0 (schema definition) |
 | Language | TypeScript 5 |
 | Styling | Tailwind CSS 4 |
@@ -249,18 +255,7 @@ TaCanvas Modu**
 | Animation | Framer Motion 12.26.2 |
 | Icons | Lucide React 0.562.0 |
 | Date | date-fns 4.1.0 |
-| PWA | @ducanh2912/next-pwa 10.2.9
-| Category | Technology |
-|----------|------------|
-| Framework | Next.js 16.1.3 (App Router, Turbopack) |
-| Desktop | Electron 40.0.0 + electron-builder |
-| Language | TypeScript 5 |
-| Styling | Tailwind CSS 4 |
-| Editor | Tiptap (StarterKit, Link, Placeholder, CharacterCount) |
-| Animation | Framer Motion 12.26.2 |
-| Icons | Lucide React |
-| Date | date-fns |
-| PWA | @ducanh2912/next-pwa |
+| PWA | @ducanh2912/next-pwa 10.2.9 |
 
 ### System Requirements
 
@@ -268,7 +263,7 @@ TaCanvas Modu**
 - Windows 10+ (64-bit)
 - macOS 10.13+
 - Linux: Ubuntu 18.04+, Fedora 32+, Debian 10+
-- RAM: -
+- RAM: 4GB recommended
 - Disk: 500MB free space
 
 **Development**
@@ -286,12 +281,22 @@ cd tubenotes
 # Install dependencies
 npm install
 
-# Development server for web
-npm run dev
-
 # Development for desktop
 npm run electron-dev
-Canvas Mode**
+
+# Build for Windows
+npm run build-win
+
+# Build for macOS
+npm run build-mac
+
+# Build for Linux
+npm run build-linux
+```
+
+### Usage
+
+**Canvas Mode**
 1. Create new canvas with "+ New Canvas"
 2. Switch to Canvas Mode
 3. Use tools:
@@ -314,32 +319,13 @@ Canvas Mode**
 1. Click "+ Add Folder" in sidebar
 2. Enter folder name, press Enter
 3. Move canvas or notes to folders
-### Usage
-
-**Adding Videos**
-1. Click "+ Add New Video" button
-2. Paste YouTube URL
-3. Click "Add Video"
-
-**Creating Folders**
-1. Click "+ Add Folder" in sidebar
-2. Enter folder name, press Enter
-
-**Taking Notes**
-1. Click on video card
-2. Use editor toolbar
-3. Notes auto-save
 
 **Status Management**
 - Hover over video card
-- Sindows: `%APPDATA%/tubenotes/tubenotes.db` (SQLite)
-- macOS: `~/Library/Application Support/tubenotes/tubenotes.db`
-- Linux: `~/.config/tubenotes/tubenotes.db`
+- Select Unwatched / Watching / Watched
+- Toggle Important (star) and Completed (checkmark)
 
-**Database**
-- Uses SQLite database (better-sqlite3)
-- Canvas data stored as JSON strings
-- Video notes and folders in relational tables
+**Search and Theme**
 - Use search box in sidebar
 - Select Dark, Navy or Light from theme dropdown
 
@@ -357,10 +343,14 @@ Edit `app/globals.css`:
 ```
 
 **Data Location**
-- Web: Browser localStorage
-- Windows: `%APPDATA%/TubeNotes/data`
-- macOS: `~/Library/Application Support/TubeNotes/data`
-- Linux: `~/.config/TubeNotes/data`
+- Windows: `%APPDATA%/tubenotes/tubenotes.db` (SQLite)
+- macOS: `~/Library/Application Support/tubenotes/tubenotes.db`
+- Linux: `~/.config/tubenotes/tubenotes.db`
+
+**Database**
+- Uses SQLite database (better-sqlite3)
+- Canvas data stored as JSON strings
+- Video notes and folders in relational tables
 
 ### Contributing
 
