@@ -1,0 +1,108 @@
+name: Bug report
+description: Report a problem or unexpected behavior in TubeNotes
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: input
+    id: app_version
+    attributes:
+      label: App version
+      description: The version you are using (e.g., 0.2.1). If unknown, write "unknown".
+      placeholder: "0.2.1"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options:
+        - Windows
+        - macOS
+        - Linux
+    validations:
+      required: true
+
+  - type: input
+    id: device
+    attributes:
+      label: Environment details (optional)
+      description: Electron/Node versions or any other relevant info if you know it.
+      placeholder: "Electron 40.x, Node 20.x"
+    validations:
+      required: false
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: A short description of the bug.
+      placeholder: "Sidebar selection highlight stays active for the last opened canvas even after navigating away, causing two items to look selected."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Provide step-by-step instructions to reproduce the issue.
+      placeholder: |
+        1. Open the app
+        2. Go to the Canvases section
+        3. Select a canvas file in the sidebar (it becomes magenta/active)
+        4. Navigate back to Home or to the Folders section
+        5. Observe the sidebar selection states
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      placeholder: "When leaving a canvas view, the previously active canvas item should no longer appear selected/highlighted in the sidebar. Only the current route/section item should be highlighted."
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      placeholder: "After leaving the canvas view, the last opened canvas item remains highlighted (magenta) while the current section (e.g., a folder) is also highlighted, making it look like two items are selected at the same time."
+    validations:
+      required: true
+
+  - type: textarea
+    id: frequency
+    attributes:
+      label: Frequency
+      description: How often does this happen?
+      placeholder: "Always / Often / Sometimes / Rarely"
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots or screen recording (optional)
+      description: Attach any screenshots or a short recording showing the sidebar state.
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs (optional)
+      description: Paste any relevant console logs or error messages.
+      render: shell
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Confirmations
+      options:
+        - label: I searched existing issues to avoid creating a duplicate.
+          required: false
+        - label: I can reproduce this issue on the latest version.
+          required: false

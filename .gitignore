@@ -107,7 +107,9 @@ DEMO_DATA.md
 QUICKSTART.md
 
 # github internal folder
-.github/
+.github/ProjectFlow.md
+.github/copilot-instructions.md
+.github/projectupdate020.md
 
 /lib/generated/prisma
 
