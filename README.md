@@ -2,7 +2,6 @@
 
 <div align="center">
 
-##  Screenshots
 
 <table>
   <tr>
